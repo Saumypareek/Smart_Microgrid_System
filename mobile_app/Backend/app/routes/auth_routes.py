@@ -6,6 +6,7 @@ from schemas.user import UserCreate
 from controllers import user_controller
 from auth.auth_handler import verify_password, encode_jwt
 from fastapi.security import OAuth2PasswordRequestForm
+from database.dependencies import get_db
 
 router = APIRouter(prefix="/auth", tags=["Auth"])
 
