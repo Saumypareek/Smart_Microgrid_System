@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from fastapi.concurrency import asynccontextmanager
+from contextlib import asynccontextmanager
 from database.config import engine, Base
 from database.init_db import init_db
 from routes import user_routes , auth_routes , analytics, readings ,device_routes, report_routes , source_routes
