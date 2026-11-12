@@ -10,8 +10,6 @@ from database.dependencies import get_db
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="auth/login")
 
-SECRET_KEY = "SECRET123"
-ALGORITHM = "HS256"
 
 def create_user(db: Session, user: UserCreate):
     # Check if email already exists
