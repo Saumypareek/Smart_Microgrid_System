@@ -3,7 +3,7 @@ from fastapi import HTTPException, status, Depends
 from jose import JWTError, jwt
 from fastapi.security import OAuth2PasswordBearer
 from database import models
-from routes.auth_routes import get_db
+
 from schemas.user import UserCreate
 from auth.auth_handler import hash_password
 from database.dependencies import get_db
