@@ -11,7 +11,6 @@ router = APIRouter(prefix="/auth", tags=["Auth"])
 
 @router.post("/register")
 def register(user: UserCreate, db: Session = Depends(get_db)):
-
     existing_user = user_controller.get_user_by_email(db, user.email)
 
     if existing_user:
@@ -25,7 +24,6 @@ def register(user: UserCreate, db: Session = Depends(get_db)):
 
 @router.post("/login")
 def login(user: UserLogin, db: Session = Depends(get_db)):
-
     db_user = user_controller.get_user_by_email(db, user.email)
 
     if not db_user or not verify_password(
